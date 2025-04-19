@@ -1,0 +1,451 @@
+/* Responsive adjustments Slider*/
+@media (max-width: 992px) {
+  .hero-img {
+    height: 70vh;
+    min-height: 500px;
+  }
+
+  .carousel-caption h1 {
+    font-size: 2.5rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-img {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .carousel-caption {
+    bottom: 20%;
+  }
+
+  .carousel-caption h1 {
+    font-size: 2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+
+  .btn-blue {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  #heroCarousel {
+    --transition-duration: 0.8s;
+  }
+}
+
+/* Faster and smoother transitions */
+#heroCarousel {
+  position: relative;
+  overflow: hidden;
+  --transition-duration: 0.6s; /* Reduced from 1.2s */
+}
+
+.carousel-inner {
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+  position: relative;
+  background-color: #000; /* Black background to prevent white flash */
+}
+
+.hero-img {
+  height: 90vh;
+  min-height: 600px;
+  max-height: 900px;
+  object-fit: cover;
+  filter: brightness(0.5);
+  transition: opacity var(--transition-duration) ease-in-out !important;
+  will-change: opacity;
+  opacity: 0; /* Start hidden */
+}
+
+.carousel-item.active .hero-img {
+  opacity: 1; /* Only show active image */
+}
+
+/* Optimized fade transition */
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition: opacity var(--transition-duration) ease-in-out;
+  transform: none !important;
+  position: absolute;
+  display: block !important; /* Force display */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-fade .carousel-item.active {
+  position: relative;
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Remove any delay between transitions */
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+  transition: opacity 0s;
+}
+
+/* Rest of your existing CSS remains the same */
+.btn-blue {
+  background: linear-gradient(135deg, #1976D2, #0D47A1);
+  color: white !important;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(25, 118, 210, 0.3);
+  font-size: 1.1rem;
+}
+
+/* ... rest of your CSS ... */
+
+/* Optimized Carousel Styles */
+#heroCarousel {
+  position: relative;
+  overflow: hidden;
+  --transition-duration: 0.5s;
+}
+
+.carousel-inner {
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+}
+
+.hero-img {
+  height: 90vh;
+  min-height: 600px;
+  max-height: 900px;
+  object-fit: cover;
+  filter: brightness(0.5);
+  transition: opacity var(--transition-duration) cubic-bezier(0.25, 0.1, 0.25, 1) !important;
+  will-change: opacity;
+}
+
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition: opacity var(--transition-duration) cubic-bezier(0.25, 0.1, 0.25, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-caption {
+  bottom: 30%;
+  right: 10%;
+  left: 10%;
+  padding-bottom: 3rem;
+  transition: opacity calc(var(--transition-duration) * 0.8) ease;
+}
+
+/* Button styles */
+.btn-blue {
+  background: linear-gradient(135deg, #1976D2, #0D47A1);
+  color: white !important;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(25, 118, 210, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-img {
+    height: 70vh;
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-img {
+    height: 60vh;
+    min-height: 400px;
+  }
+  #heroCarousel {
+    --transition-duration: 0.4s;
+  }
+}
+
+
+/* about section */
+/* About Section Styles */
+.about-section {
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-image-container {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.about-image-container img {
+  transition: transform 0.5s ease;
+}
+
+.about-image-container:hover img {
+  transform: scale(1.03);
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  width: 140px;
+  text-align: center;
+  z-index: 2;
+}
+
+.experience-badge h3 {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.feature-icon {
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.d-flex:hover .feature-icon {
+  background-color: rgba(25, 118, 210, 0.2) !important;
+  transform: rotate(5deg);
+}
+
+.services-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.services-tags .badge {
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.services-tags .badge:hover {
+  background-color: var(--bs-primary) !important;
+  color: white !important;
+  transform: translateY(-3px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .about-section {
+    text-align: center !important;
+  }
+
+  .about-section [dir="rtl"] {
+    text-align: center !important;
+  }
+
+  .services-tags {
+    justify-content: center;
+  }
+
+  .experience-badge {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* about section */
+/* About Section RTL Styles */
+.about-section {
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Tajawal', sans-serif;
+  text-align: right;
+}
+
+.about-image-container {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.about-image-container img {
+  transition: transform 0.5s ease;
+}
+
+.about-image-container:hover img {
+  transform: scale(1.03);
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  width: 140px;
+  text-align: center;
+  z-index: 2;
+}
+
+.experience-badge h3 {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.feature-icon {
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.d-flex:hover .feature-icon {
+  background-color: rgba(25, 118, 210, 0.2) !important;
+  transform: rotate(5deg);
+}
+
+.services-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.services-tags .badge {
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.services-tags .badge:hover {
+  background-color: var(--bs-primary) !important;
+  color: white !important;
+  transform: translateY(-3px);
+}
+
+/* RTL Specific Adjustments */
+[dir="rtl"] .ms-2 {
+  margin-left: 0.5rem !important;
+  margin-right: 0 !important;
+}
+
+[dir="rtl"] .me-3 {
+  margin-right: 0 !important;
+  margin-left: 1rem !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .about-section {
+    text-align: center !important;
+  }
+
+  .experience-badge {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .services-tags {
+    justify-content: center;
+  }
+}
+
+
+ /* Service Section */
+
+/* Services Section Styles */
+.services-section {
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-header {
+  position: relative;
+  z-index: 2;
+}
+
+.max-w-800 {
+  max-width: 800px;
+}
+
+.text-blue {
+  color: #0d47a1;
+}
+
+.bg-blue-light {
+  background-color: rgba(13, 71, 161, 0.1);
+}
+
+.service-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.service-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  background-color: #0d47a1 !important;
+  color: white !important;
+}
+
+.service-features li {
+  position: relative;
+  padding-right: 25px;
+  transition: all 0.3s ease;
+}
+
+.service-features li:hover {
+  transform: translateX(5px);
+}
+
+/* RTL Adjustments */
+[dir="rtl"] .service-features li {
+  padding-right: 0;
+  padding-left: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .service-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .section-header p {
+    font-size: 1rem;
+  }
+}

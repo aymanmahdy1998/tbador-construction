@@ -1,0 +1,156 @@
+<div class="projects-container" dir="rtl">
+  <!-- Projects Hero Section -->
+  <section class="projects-hero py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-end">
+          <h1 class="fw-bold mb-3 display-4 text-blue">مشاريعنا</h1>
+          <p class="lead mb-4">
+            نفتخر بتنفيذ مشاريع مميزة بمعايير عالمية. اكتشف بعض إنجازاتنا التي تعكس خبرتنا وتميزنا في مجال المقاولات.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <img src="assets/images/projects-hero.jpg" alt="مشاريع تبادر للمقاولات" class="img-fluid rounded shadow-lg">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Table Section -->
+  <section class="projects-table py-5">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2 class="fw-bold text-blue mb-3">سجل مشاريعنا</h2>
+        <p class="text-muted">قائمة بأبرز مشاريعنا المنفذة بجودة عالية ووفقًا للمعايير المطلوبة</p>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered table-striped">
+          <thead class="bg-blue text-white">
+            <tr>
+              <th class="text-center">#</th>
+              <th>اسم المشروع</th>
+              <th class="text-center">قيمة العقد (ريال سعودي)</th>
+              <th class="text-center">تاريخ الانتهاء</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let project of projects">
+              <td class="text-center">{{project.id}}</td>
+              <td>{{project.name}}</td>
+              <td class="text-center">{{project.value.toLocaleString()}}</td>
+              <td class="text-center">{{project.year}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section class="featured-projects py-5 bg-light">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2 class="fw-bold text-blue">مشاريع مميزة</h2>
+        <p class="text-muted">نعرض لكم بعض مشاريعنا التي نفخر بتنفيذها</p>
+      </div>
+
+      <!-- Waqf Al-Mousa Project -->
+      <div class="project-showcase mb-5">
+        <div class="project-header text-center mb-4">
+          <h3 class="fw-bold text-blue">إنشاء وقف الموسى</h3>
+          <p class="text-muted">المالك: وقف سعد وعبد العزيز الموسى</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4" *ngFor="let img of waqfImages">
+            <div class="project-card shadow-sm rounded overflow-hidden h-100">
+              <img [src]="img.src" [alt]="img.alt" class="img-fluid w-100 project-img">
+              <div class="project-overlay">
+                <button class="btn btn-blue btn-sm" (click)="openImage(img.src)">
+                  <i class="fas fa-expand me-2"></i> تكبير الصورة
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Al-Fursan Mosque Project -->
+      <div class="project-showcase">
+        <div class="project-header text-center mb-4">
+          <h3 class="fw-bold text-blue">مسجد حي الفرسان بالدمام</h3>
+          <p class="text-muted">المالك: وزارة الشؤون الإسلامية والأوقاف</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4" *ngFor="let img of mosqueImages">
+            <div class="project-card shadow-sm rounded overflow-hidden h-100">
+              <img [src]="img.src" [alt]="img.alt" class="img-fluid w-100 project-img">
+              <div class="project-overlay">
+                <button class="btn btn-blue btn-sm" (click)="openImage(img.src)">
+                  <i class="fas fa-expand me-2"></i> تكبير الصورة
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          <!-- Al-Narges Project -->
+          <div class="project-showcase">
+            <div class="project-header text-center mb-4">
+              <h3 class="fw-bold text-blue">عمارة النرجس السكنية</h3>
+              <p class="text-muted">المالك: شركة متون العقارية</p>
+            </div>
+            <div class="row g-4">
+              <div class="col-md-4" *ngFor="let img of nargesImages">
+                <div class="project-card shadow-sm rounded overflow-hidden h-100">
+                  <img [src]="img.src" [alt]="img.alt" class="img-fluid w-100 project-img">
+                  <div class="project-overlay">
+                    <button class="btn btn-blue btn-sm" (click)="openImage(img.src)">
+                      <i class="fas fa-expand me-2"></i> تكبير الصورة
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Al-Hassa Project -->
+                    <div class="project-showcase">
+                      <div class="project-header text-center mb-4">
+                        <h3 class="fw-bold text-blue">مشروع ديار الحسا</h3>
+                        <p class="text-muted">المالك: وزارة الإسكان</p>
+                      </div>
+                      <div class="row g-4">
+                        <div class="col-md-4" *ngFor="let img of hassaImages">
+                          <div class="project-card shadow-sm rounded overflow-hidden h-100">
+                            <img [src]="img.src" [alt]="img.alt" class="img-fluid w-100 project-img">
+                            <div class="project-overlay">
+                              <button class="btn btn-blue btn-sm" (click)="openImage(img.src)">
+                                <i class="fas fa-expand me-2"></i> تكبير الصورة
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                                        <!-- Al-Houda Project -->
+                                        <div class="project-showcase">
+                                          <div class="project-header text-center mb-4">
+                                            <h3 class="fw-bold text-blue">مبنى مشاعل الهدى</h3>
+                                            <p class="text-muted">المالك: شركة مشاعل الهدى العقارية</p>
+                                          </div>
+                                          <div class="row g-4">
+                                            <div class="col-md-4" *ngFor="let img of houdaImages">
+                                              <div class="project-card shadow-sm rounded overflow-hidden h-100">
+                                                <img [src]="img.src" [alt]="img.alt" class="img-fluid w-100 project-img">
+                                                <div class="project-overlay">
+                                                  <button class="btn btn-blue btn-sm" (click)="openImage(img.src)">
+                                                    <i class="fas fa-expand me-2"></i> تكبير الصورة
+                                                  </button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg construction-navbar bg-white py-3" dir="rtl">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <img src="assets/images/logo.png" height="50" class="ms-2" alt="Logo">
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="custom-toggler-icon">
+        <i class="fas fa-bars"></i>
+      </span>
+    </button>
+
+    <!-- Navigation -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center">
+        <li class="nav-item mx-2">
+          <!-- <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">الصفحة الرئيسية</a> -->
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link" routerLink="/about-us" routerLinkActive="active">من نحن</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link" routerLink="/services" routerLinkActive="active">خدماتنا </a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link" routerLink="/projects" routerLinkActive="active">مشاريعنا</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link" routerLink="/contact-us" routerLinkActive="active">اتصل بنا</a>
+        </li>
+      </ul>
+
+      <!-- CTA Button -->
+      <div class="d-flex">
+        <a href="tel:+966123456789" class="btn btn-primary btn-blue me-2 d-none d-lg-flex align-items-center">
+          <i class="fas fa-phone-alt me-2"></i> اتصل الآن
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

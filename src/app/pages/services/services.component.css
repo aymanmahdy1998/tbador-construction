@@ -1,0 +1,261 @@
+
+
+/* about section */
+/* About Section Styles */
+.about-section {
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-image-container {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.about-image-container img {
+  transition: transform 0.5s ease;
+}
+
+.about-image-container:hover img {
+  transform: scale(1.03);
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  width: 140px;
+  text-align: center;
+  z-index: 2;
+}
+
+.experience-badge h3 {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.feature-icon {
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.d-flex:hover .feature-icon {
+  background-color: rgba(25, 118, 210, 0.2) !important;
+  transform: rotate(5deg);
+}
+
+.services-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.services-tags .badge {
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.services-tags .badge:hover {
+  background-color: var(--bs-primary) !important;
+  color: white !important;
+  transform: translateY(-3px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .about-section {
+    text-align: center !important;
+  }
+
+  .about-section [dir="rtl"] {
+    text-align: center !important;
+  }
+
+  .services-tags {
+    justify-content: center;
+  }
+
+  .experience-badge {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* about section */
+/* About Section RTL Styles */
+.about-section {
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Tajawal', sans-serif;
+  text-align: right;
+}
+
+.about-image-container {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.about-image-container img {
+  transition: transform 0.5s ease;
+}
+
+.about-image-container:hover img {
+  transform: scale(1.03);
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  width: 140px;
+  text-align: center;
+  z-index: 2;
+}
+
+.experience-badge h3 {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.feature-icon {
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.d-flex:hover .feature-icon {
+  background-color: rgba(25, 118, 210, 0.2) !important;
+  transform: rotate(5deg);
+}
+
+.services-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.services-tags .badge {
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.services-tags .badge:hover {
+  background-color: var(--bs-primary) !important;
+  color: white !important;
+  transform: translateY(-3px);
+}
+
+/* RTL Specific Adjustments */
+[dir="rtl"] .ms-2 {
+  margin-left: 0.5rem !important;
+  margin-right: 0 !important;
+}
+
+[dir="rtl"] .me-3 {
+  margin-right: 0 !important;
+  margin-left: 1rem !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .about-section {
+    text-align: center !important;
+  }
+
+  .experience-badge {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .services-tags {
+    justify-content: center;
+  }
+}
+
+
+ /* Service Section */
+
+/* Services Section Styles */
+.services-section {
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-header {
+  position: relative;
+  z-index: 2;
+}
+
+.max-w-800 {
+  max-width: 800px;
+}
+
+.text-blue {
+  color: #0d47a1;
+}
+
+.bg-blue-light {
+  background-color: rgba(13, 71, 161, 0.1);
+}
+
+.service-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.service-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  background-color: #0d47a1 !important;
+  color: white !important;
+}
+
+.service-features li {
+  position: relative;
+  padding-right: 25px;
+  transition: all 0.3s ease;
+}
+
+.service-features li:hover {
+  transform: translateX(5px);
+}
+
+/* RTL Adjustments */
+[dir="rtl"] .service-features li {
+  padding-right: 0;
+  padding-left: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .service-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .section-header p {
+    font-size: 1rem;
+  }
+}
